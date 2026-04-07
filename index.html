@@ -287,12 +287,15 @@
     <script>
         async function loadStatus() {
             try {
-                const resp = await fetch('status.json?' + Date.now());
+                const statusUrl = new URL('./status.json', window.location.href);
+                statusUrl.searchParams.set('t', Date.now());
+                const resp = await fetch(statusUrl.toString(), { cache: 'no-store' });
                 if (!resp.ok) throw new Error('fetch failed');
                 const data = await resp.json();
                 render(data);
                 document.getElementById('error-banner').style.display = 'none';
             } catch (e) {
+                console.error('Mission Control status fetch failed:', e);
                 document.getElementById('error-banner').style.display = 'block';
             }
         }
