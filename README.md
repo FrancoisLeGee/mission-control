@@ -4,7 +4,8 @@ author: FrancoisLeGee
 emoji: 🦾
 colorFrom: blue
 colorTo: indigo
-sdk: static
+sdk: gradio
+app_file: app.py
 pinned: false
 ---
 
@@ -12,6 +13,7 @@ pinned: false
 
 Simple live mission control dashboard for Francois.
 
-Files:
-- `index.html`
-- `status.json`
+Routes:
+- `/`
+- `/index.html`
+- `/status.json`
