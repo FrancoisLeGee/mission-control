@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=🦾 Mission Control
+Comment=Francois Status Dashboard
+Exec=python3 /home/francois/.openclaw/workspace/projects/mission-control/mission-control.py
+Icon=utilities-system-monitor
+Terminal=false
+Type=Application
+Categories=Utility;
